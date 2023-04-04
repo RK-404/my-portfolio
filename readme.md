@@ -1,4 +1,4 @@
-<h1 align="center"> 👋 Hello Good People! 😊 Welcome to my portfolio</h1>
+<h1 align="center"> 👋 Hello Good People! 😊<br>Welcome to my portfolio</h1>
 
 A live server can be found here 👉 [Ridwan's Portfolio](https://rk-404.github.io/my-portfolio//)
 
@@ -15,6 +15,6 @@ As a user You will be able to:
 
 - If you select **_Random Advice_** it will show you a Advice Randomly.
 
-- Get a new advice if you click **_Get a new advice_** button.
+- You will get a new advice if you click **_Get a new advice_** button.
 
 - If you select **_About Me_** it will show you some information about myself.
