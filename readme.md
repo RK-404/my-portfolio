@@ -11,8 +11,10 @@ As a user You will be able to:
 
 - And see the picture of that planet on the background.
 
-- Navigate through all three links of **Planets**, **Random Advice** & **About Me**.
+- Navigate through all three links of **_Planets_**, **_Random Advice_** & **_About Me_**.
 
-- If you select **Random Advice** it will show you a Advice Randomly.
+- If you select **_Random Advice_** it will show you a Advice Randomly.
 
-- If you select **About Me** it will show you some information about myself.
+- Get a new advice if you click **_Get a new advice_** button.
+
+- If you select **_About Me_** it will show you some information about myself.
