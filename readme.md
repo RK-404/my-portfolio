@@ -7,9 +7,11 @@ A live server can be found here 👉 [Ridwan's Portfolio](https://rk-404.github.
 As a user You will be able to:
 - See some basic information of the primary planets of our solar system.
 
-- Search a specific planet by the name.
-
 - And see the picture of that planet on the background.
+
+- When first load a random planet will be previewed on the page.
+
+- Search a specific planet by the name.
 
 - Navigate through all three links of **_Planets_**, **_Random Advice_** & **_About Me_**.
 
