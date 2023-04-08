@@ -4,7 +4,7 @@ A live server can be found here 👉 [Ridwan's Portfolio](https://rk-404.github.
 
 ---
 
-As a user You will be able to:
+As a user you will be able to:
 - See some basic information of the primary planets of our solar system.
 
 - And see the picture of that planet on the background.
