@@ -1,6 +1,6 @@
 <h1 align="center"> 👋 Hello Good People! 😊<br>Welcome to my portfolio</h1>
 
-A live server can be found here 👉 [Ridwan's Portfolio](https://rk-404.github.io/my-portfolio//)
+A live server can be found here 👉 [Ridwan's Portfolio](https://rk-404.github.io/my-portfolio/)
 
 ---
 
