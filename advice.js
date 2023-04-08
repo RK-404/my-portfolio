@@ -12,6 +12,5 @@ showAdvice();
 
 getAdvice.addEventListener("click", event => {
     event.preventDefault();
-    // getAdvice.click();
     showAdvice();
 })
