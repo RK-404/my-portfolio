@@ -12,9 +12,9 @@ const options = {
 };
 
 fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
-	.then(response => response.json())
-	.then(response => showPlanet(response))
-	.catch(err => console.error(err));
+.then(response => response.json())
+.then(response => showPlanet(response))
+.catch(err => console.error(err));
 
 let showPlanet = (planets) => {
     loadOnPage(planets[Math.floor(Math.random() * planets.length)]);
