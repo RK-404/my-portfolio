@@ -9,7 +9,7 @@ As a user you will be able to:
 
 - And see the picture of that planet on the background.
 
-- When first load a random planet will be previewed on the page.
+- At the first load a random planet will be previewed on the page.
 
 - Search a specific planet by the name.
 
@@ -17,6 +17,6 @@ As a user you will be able to:
 
 - If you select **_Random Advice_** it will show you a Advice Randomly.
 
-- You will get a new advice if you click **_Get a new advice_** button.
+- You will get a new advice by clicking **_Get a new advice_** button on the **_Random Advice_** page.
 
 - If you select **_About Me_** it will show you some information about myself.
