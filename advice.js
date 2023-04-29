@@ -1,11 +1,11 @@
 let getAdvice = document.getElementById("advice-button");
-let h3 = document.querySelector("h3");
+let info = document.querySelector(".info");
 
 let showAdvice = () => {
     fetch('https://api.adviceslip.com/advice')
     .then(response => response.json())
-    .then(data => h3.innerText = data.slip.advice)
-    .catch(err => console.error(err));
+    .then(data => info.innerHTML = `<h3 id="advice">${data.slip.advice}</h3>`)
+    .catch(err => info.innerHTML = `<h3 id="advice">Sorry, server is not responding!</h3><p id="advice">${err}</p>`);
 }
 
 showAdvice();

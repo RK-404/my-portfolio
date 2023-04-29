@@ -2,6 +2,7 @@ let body = document.querySelector("body");
 let header = document.querySelector("h1");
 let searchButton = document.querySelector("button");
 let searchInput = document.querySelector("input");
+let info = document.querySelector(".info");
 
 const options = {
 	method: 'GET',
@@ -14,10 +15,10 @@ const options = {
 fetch('https://planets-info-by-newbapi.p.rapidapi.com/api/v1/planets/', options)
 .then(response => response.json())
 .then(response => showPlanet(response))
-.catch(err => console.error(err));
+.catch(err => errorMsg(err));
 
 let showPlanet = (planets) => {
-    loadOnPage(planets[Math.floor(Math.random() * planets.length)]);
+    loadPlanetOnPage(planets[Math.floor(Math.random() * planets.length)]);
 
     searchInput.addEventListener("keypress", event => {
         if (event.key === "Enter") {
@@ -36,26 +37,56 @@ let showPlanet = (planets) => {
                 window.alert("Planet is not found!\nPlease enter a valid planet name of our solar system.");
             }
             else{
-                loadOnPage(result);
+                loadPlanetOnPage(result);
             }
         }
     });
 }
 
-let loadOnPage = (planet) => {
+let loadPlanetOnPage = (planet) => {
     header.textContent = planet.name.toUpperCase();
     body.style.backgroundImage = `url('${planet.imgSrc.img}')`;
 
-    let description = document.getElementById("description");
+    let h2 = document.createElement("h2");
+    h2.innerText = "Did you know?";
+
+    let description = document.createElement("li");
     description.innerText = planet.description;
 
-    let volume = document.getElementById("volume");
+    let volume = document.createElement("li");
     volume.innerText = `Volume of ${planet.name}: ${planet.basicDetails.volume}`;
 
-    let mass = document.getElementById("mass");
+    let mass = document.createElement("li");
     mass.innerText = `Mass of ${planet.name}: ${planet.basicDetails.mass}`;
 
-    let link = document.getElementById("link");
-    link.href = planet.wikiLink;
-    link.textContent = planet.source;
+    let ul = document.createElement("ul");
+    ul.append(description, volume, mass);
+
+    let link = document.createElement("p");
+    link.innerHTML = `Learn more 👉 <a href="${planet.wikiLink}" target="_blank">${planet.source}</a>`;
+    
+    info.innerHTML = "";
+    info.append(h2, ul, link);
 }
+
+let errorMsg = (err) => {
+    info.innerHTML = `<h3>Sorry, server is not responding!</h3><p>${err}</p>`;
+}
+
+// let loadOnPage = (planet) => {
+//     header.textContent = planet.name.toUpperCase();
+//     body.style.backgroundImage = `url('${planet.imgSrc.img}')`;
+
+//     let description = document.getElementById("description");
+//     description.innerText = planet.description;
+
+//     let volume = document.getElementById("volume");
+//     volume.innerText = `Volume of ${planet.name}: ${planet.basicDetails.volume}`;
+
+//     let mass = document.getElementById("mass");
+//     mass.innerText = `Mass of ${planet.name}: ${planet.basicDetails.mass}`;
+
+//     let link = document.getElementById("link");
+//     link.href = planet.wikiLink;
+//     link.textContent = planet.source;
+// }
