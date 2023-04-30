@@ -3,6 +3,7 @@ let header = document.querySelector("h1");
 let searchButton = document.querySelector("button");
 let searchInput = document.querySelector("input");
 let info = document.querySelector(".info");
+let search = document.querySelector(".search");
 
 const options = {
 	method: 'GET',
@@ -70,7 +71,8 @@ let loadPlanetOnPage = (planet) => {
 }
 
 let errorMsg = (err) => {
-    info.innerHTML = `<h3>Sorry, server is not responding!</h3><p>${err}</p>`;
+    search.style.display = "none";
+    info.innerHTML = `<h3 class="advice">Sorry, server is not responding!</h3><p class="advice">${err}</p>`;
 }
 
 // let loadOnPage = (planet) => {

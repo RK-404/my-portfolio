@@ -4,8 +4,8 @@ let info = document.querySelector(".info");
 let showAdvice = () => {
     fetch('https://api.adviceslip.com/advice')
     .then(response => response.json())
-    .then(data => info.innerHTML = `<h3 id="advice">${data.slip.advice}</h3>`)
-    .catch(err => info.innerHTML = `<h3 id="advice">Sorry, server is not responding!</h3><p id="advice">${err}</p>`);
+    .then(data => info.innerHTML = `<h3 class="advice">${data.slip.advice}</h3>`)
+    .catch(err => info.innerHTML = `<h3 class="advice">Sorry, server is not responding!</h3><p class="advice">${err}</p>`);
 }
 
 showAdvice();
